@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        var c_canvas = document.getElementById("c");
+        var context = c_canvas.getContext("2d");
+        // vertical lines for graph
+        for (var x = 0.5; x < 500; x += 10) {
+            context.moveTo(x, 0);
+            context.lineTo(x, 500);
+        }
+        // hortizontal lines for graph
+        for (var y = 0.5; y < 500; y += 10) {
+            context.moveTo(0, y);
+            context.lineTo(500, y);
+        }
+        context.strokeStyle = "#808080";
+        context.stroke();
+    </script>
+</head>
+<body>
+    <canvas id="c" width="500" height="500"></canvas>
+</body>
+</html>
